@@ -32,7 +32,10 @@ Example : react
           }
 
 
-### Create and Run a Simple Project with a Sample Script
+
+
+
+# Create and Run a Project with a Simple Script
 
       node my-script.js  
 
@@ -54,7 +57,7 @@ This creates a script with the command provided and saves effort to type the ent
 
 
 
-### Creating Modules in Node.js - Adding more Scripts to the Project 
+### Adding more Scripts to the Project - Creating Modules in Node.js
 
 Node treats each file as module. We can share code between files, that is reuse code
 
@@ -74,7 +77,7 @@ Node treats each file as module. We can share code between files, that is reuse 
 		npm run hello
 	
 
-### Create and Run Modern JS Code
+### How to Run Modern JS Code
  
 		export default greet;
 
@@ -105,47 +108,66 @@ Website : https://babeljs.io/
     		npm run hello
 
 
-Setup a basic server
+# Setup a basic server with express
+
 	 src/server.js
+	 	import express from 'express';
+		const app = express();
+		app.listen(8000, () =>  {
+		    console.log('Server is listening on port 8000')
+		});
 
         npx babel-node src/server.js
 
-Auto start server
-npm install --save-dev nodemon
+
+
+### Auto start server on code changes
+		npm install --save-dev nodemon
 
 Instead of running npx command everytime, we tell the nodemon to watch our files and restart if any changes.
 
-npx nodemon --exec npx babel-node src/server.js
+		npx nodemon --exec npx babel-node src/server.js
 
 
-"scripts": {
-    "hello": "npx babel-node my-script.js",
-    "start": "npx nodemon --exec npx babel-node src/server.js"
-  },
+		"scripts": {
+		    "hello": "npx babel-node my-script.js",
+		    "start": "npx nodemon --exec npx babel-node src/server.js"
+		  },
 
 
-For POST requests
-   npm install body-parser
+### Handling  POST requests
+   		npm install body-parser
 
-Server.js
+	Server.js
   
-import bodyParser from 'body-parser';
+		import bodyParser from 'body-parser';
 
-app.use(bodyParser.json());
-
-
+		app.use(bodyParser.json());
 
 
-app.post('/hello', (req, res) => { 
-    res.send(`Hello  ${req.body.name}!`)
-});
-app.get('/hello/:name', (req, res) => { 
-    res.send(`Hello ${req.params.name}!`)
-});
 
 
-/users/:username/repos
-Copy
-Any colons (:) on a path denotes a variable. You should replace these values with actual values of when you send your request. In this case, you should replace :username with the actual username of the user you’re searching for. If I’m searching for my Github account, I’ll replace :username with zellwk.
+		app.post('/hello', (req, res) => { 
+		    res.send(`Hello  ${req.body.name}!`)
+		});
+		app.get('/hello/:name', (req, res) => { 
+		    res.send(`Hello ${req.params.name}!`)
+		});
 
-![image](https://user-images.githubusercontent.com/34193287/111023520-8703bb80-83ff-11eb-871a-4d9f79250523.png)
+
+# Connecting to Database - MongoDB
+
+
+
+### Testing endpoints with curl
+
+	curl http://localhost:8000/api/articles/School
+	{"_id":"604bb7da7671bc7ca6e866a9","name":"School","upvotes":0,"comments":"Temp"}
+
+	curl -X POST  http://localhost:8000/api/articles/School/upvote
+	{"_id":"604bb7da7671bc7ca6e866a9","name":"School","upvotes":1,"comments":"Temp"}
+
+
+	curl http://localhost:8000/api/articles/School
+	{"_id":"604bb7da7671bc7ca6e866a9","name":"School","upvotes":1,"comments":"Temp"}![image](https://user-images.githubusercontent.com/34193287/111024386-8d486680-8404-11eb-952f-ce83cedd7c81.png)
+
