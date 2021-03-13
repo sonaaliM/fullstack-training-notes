@@ -2,21 +2,33 @@
 
 **NODE.js Website** https://nodejs.org/en/
 
+&nbsp;
+&nbsp;
+
 ### Check Node JS Version to confirm installation
   node -v
+
+&nbsp;
+&nbsp;
 
 ### Create a simple project 
 
       npm init -y
   
 
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
 
 # Understanding Node Package Manager(NPM)
 
 NPM Website where you can search for packages :  https://www.npmjs.com/
 \
 Example : react 
- 
+
+&nbsp;
+&nbsp;
  
 ### Installing a package using NPM
 
@@ -32,13 +44,18 @@ Example : react
           }
 
 
-
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
 
 
 # Create and Run a Project with a Simple Script
 
       node my-script.js  
 
+&nbsp;
+&nbsp;
 
 ### Creating a startup script in package.json
      
@@ -78,6 +95,8 @@ Node treats each file as module. We can share code between files, that is reuse 
 
 		npm run hello
 	
+&nbsp;
+&nbsp;
 
 ### How to Run Modern JS Code
  
@@ -109,7 +128,10 @@ Website : https://babeljs.io/
 
     		npm run hello
 
-
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
 # Setup a basic server with express
 
 	 src/server.js
@@ -122,7 +144,8 @@ Website : https://babeljs.io/
         npx babel-node src/server.js
 
 
-
+&nbsp;
+&nbsp;
 ### Auto start server on code changes
 		npm install --save-dev nodemon
 
@@ -136,7 +159,8 @@ Instead of running npx command everytime, we tell the nodemon to watch our files
 		    "start": "npx nodemon --exec npx babel-node src/server.js"
 		  },
 
-
+&nbsp;
+&nbsp;
 ### Handling  POST requests
    		npm install body-parser
 
@@ -156,10 +180,15 @@ Instead of running npx command everytime, we tell the nodemon to watch our files
 		    res.send(`Hello ${req.params.name}!`)
 		});
 
-
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
 # Connecting to Database - MongoDB
 
 
+&nbsp;
+&nbsp;
 
 ### Testing endpoints with curl
 
