@@ -13,6 +13,7 @@
 # Understanding Node Package Manager(NPM)
 
 NPM Website where you can search for packages :  https://www.npmjs.com/
+\
 Example : react 
  
 ### Installing a package using NPM
