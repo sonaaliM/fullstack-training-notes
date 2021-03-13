@@ -87,17 +87,21 @@ Node treats each file as module. We can share code between files, that is reuse 
 Website : https://babeljs.io/
 
 + Install Babel
-\
+
 
 		npm install --save-dev @babel/core @babel/node @babel/preset-env
 
 
 + Change the startup script to use **npx babel-node** 
+
+
 		"scripts": {
 		    "hello": "npx babel-node my-script.js"
 		  },
 
 + Run the sscript with npm
+
+
     		npm run hello
 
 
