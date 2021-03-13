@@ -2,10 +2,10 @@
 
 **NODE.js Website** https://nodejs.org/en/
 
-## Check Node JS Version to confirm installation
+### Check Node JS Version to confirm installation
   node -v
 
-## Create and run a simple project 
+### Create and run a simple project 
 
       npm init -y
   
@@ -15,7 +15,7 @@
 NPM Website where you can search for packages :  https://www.npmjs.com/
 Example : react 
  
-## Installing a package using NPM
+### Installing a package using NPM
 
     npm install express
  
@@ -28,11 +28,11 @@ Example : react
             "express": "^4.17.1"
           }
 	
-# Create and Run a Simple Project with a Sample Script
+### Create and Run a Simple Project with a Sample Script
 
       node my-script.js  
 
-# Creating a startup script in package.json
+### Creating a startup script in package.json
      
 Saves typing commonly used commands.
     
