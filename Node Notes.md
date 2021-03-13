@@ -1,12 +1,12 @@
 # How to Install Node.js
-
+&nbsp;
+&nbsp;
 **NODE.js Website** https://nodejs.org/en/
-
 &nbsp;
 &nbsp;
 
 ### Check Node JS Version to confirm installation
-  node -v
+  	node -v
 
 &nbsp;
 &nbsp;
@@ -14,15 +14,13 @@
 ### Create a simple project 
 
       npm init -y
-  
 
 &nbsp;
 &nbsp;
 &nbsp;
 &nbsp;
-
 # Understanding Node Package Manager(NPM)
-
+&nbsp;
 NPM Website where you can search for packages :  https://www.npmjs.com/
 \
 Example : react 
@@ -42,14 +40,10 @@ Example : react
         "dependencies": {
             "express": "^4.17.1"
           }
-
-
 &nbsp;
 &nbsp;
 &nbsp;
 &nbsp;
-
-
 # Create and Run a Project with a Simple Script
 
       node my-script.js  
