@@ -8,6 +8,7 @@
   	node -v
 
 ### Create a simple project 
+      mkdir react-backend
       npm init -y
 
 &nbsp;
@@ -56,12 +57,15 @@ This creates a script with the command provided and saves effort to type the ent
 Node treats each file as module. We can share code between files, that is reuse code
 
 2 ways of creating modules : The first is older version syntax of javascript
-
+&nbsp;
++ **greet.js** - Create a function **greet()** to reuse in another script
 
 		function greet(){
 		    console.log("Good Day");
 		}
 		module.exports=greet;
+
++ **my-scrip.js** - Import and call the function **greet()** from **greet.js**
 
 		const greet = require('./greet.js');
 		console.log("Hello World");
