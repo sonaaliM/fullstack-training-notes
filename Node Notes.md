@@ -5,17 +5,18 @@
 ### Check Node JS Version to confirm installation
   node -v
 
-### Create and run a simple project 
+### Create a simple project 
 
       npm init -y
   
-\
+
 
 # Understanding Node Package Manager(NPM)
 
 NPM Website where you can search for packages :  https://www.npmjs.com/
 \
 Example : react 
+ 
  
 ### Installing a package using NPM
 
@@ -29,14 +30,16 @@ Example : react
         "dependencies": {
             "express": "^4.17.1"
           }
-	
+
+
 ### Create and Run a Simple Project with a Sample Script
 
       node my-script.js  
 
+
 ### Creating a startup script in package.json
      
-Saves typing commonly used commands.
+This creates a script with the command provided and saves effort to type the entire command everytime.
     
 + Add the **script name** : *hello* and the **command** to execute : *node ./my-script.js*
        
@@ -51,45 +54,49 @@ Saves typing commonly used commands.
 
 
 
-Create Modules in Node.js
-Node treats each file as module
-We can share code between files, that is reuse code
+### Creating Modules in Node.js - Adding more Scripts to the Project 
 
-2 ways of creating modules
+Node treats each file as module. We can share code between files, that is reuse code
 
-Old Way
-	function greet(){
-	    console.log("Good Day");
-	}
-	module.exports=greet;
-	
-	const greet = require('./greet.js');
-	console.log("Hello World");
-	greet();
-	
-	
-	npm run hello
+2 ways of creating modules : The first is older version syntax of javascript
+
+
+		function greet(){
+		    console.log("Good Day");
+		}
+		module.exports=greet;
+
+		const greet = require('./greet.js');
+		console.log("Hello World");
+		greet();
+
+
+		npm run hello
 	
 
-Create and Run Modern JS Code
+### Create and Run Modern JS Code
  
-export default greet;
+		export default greet;
 
-import greet from './greet.js';
-
-
-
-
-npm install --save-dev @babel/core @babel/node @babel/preset-env
+		import greet from './greet.js';
 
 
 
-"scripts": {
-    "hello": "npx babel-node my-script.js"
-  },
+*To run the code we need **Babel** which is a javascript compiler*
+
+Website : https://babeljs.io/
+
++ Install Babel
+		npm install --save-dev @babel/core @babel/node @babel/preset-env
 
 
-    npm run hello
++ Change the startup script to use **npx babel-node** 
+		"scripts": {
+		    "hello": "npx babel-node my-script.js"
+		  },
+
++ Run the sscript with npm
+    		npm run hello
 
 
 Setup a basic server
