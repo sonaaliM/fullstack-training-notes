@@ -7,10 +7,8 @@
 
 ### Check Node JS Version to confirm installation
   	node -v
-
 &nbsp;
 &nbsp;
-
 ### Create a simple project 
 
       npm init -y
