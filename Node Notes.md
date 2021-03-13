@@ -4,15 +4,13 @@
 **NODE.js Website** https://nodejs.org/en/
 &nbsp;
 &nbsp;
-
+&nbsp;
 ### Check Node JS Version to confirm installation
   	node -v
 &nbsp;
 &nbsp;
 ### Create a simple project 
-
       npm init -y
-
 &nbsp;
 &nbsp;
 &nbsp;
