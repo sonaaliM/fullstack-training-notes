@@ -65,7 +65,7 @@ Node treats each file as module. We can share code between files, that is reuse 
 		}
 		module.exports=greet;
 
-+ **my-scrip.js** - Import and call the function **greet()** from **greet.js**
++ **my-script.js** - Import and call the function **greet()** from **greet.js**
 
 		const greet = require('./greet.js');
 		console.log("Hello World");
