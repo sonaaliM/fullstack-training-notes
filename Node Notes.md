@@ -40,7 +40,7 @@ Example : react
    
 This creates a script with the command provided and saves effort to type the entire command everytime.
     
-+ Add the **script name** : *hello* and the **command** to execute : *node ./my-script.js*
++ Add the **script name** : *hello* and the **command** to execute in **package.json** : *node ./my-script.js*
        
        "scripts": {
           "hello": "node ./my-script.js"
