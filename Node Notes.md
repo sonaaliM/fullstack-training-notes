@@ -177,3 +177,7 @@ Instead of running npx command everytime, we tell the nodemon to watch our files
 	curl http://localhost:8000/api/articles/School
 	{"_id":"604bb7da7671bc7ca6e866a9","name":"School","upvotes":1,"comments":"Temp"}![image](https://user-images.githubusercontent.com/34193287/111024386-8d486680-8404-11eb-952f-ce83cedd7c81.png)
 
+# Creating App with React
+
+	npx create-react-app my-app
+	
