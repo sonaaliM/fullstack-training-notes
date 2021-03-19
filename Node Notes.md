@@ -1,6 +1,6 @@
 # How to Install Node.js
 &nbsp;
-&nbsp;
+
  **NODE.js Website** https://nodejs.org/en/
 &nbsp;
 
@@ -139,9 +139,10 @@ Instead of running npx command everytime, we tell the nodemon to watch our files
 
 &nbsp;
 ### Handling  POST requests
-   		npm install body-parser
+   		  
+         npm install body-parser
 
-	Server.js
+**Server.js**
   
 		import bodyParser from 'body-parser';
 
@@ -159,25 +160,77 @@ Instead of running npx command everytime, we tell the nodemon to watch our files
 
 
 &nbsp;
-# Connecting to Database - MongoDB
-
-
-&nbsp;
-&nbsp;
 
 ### Testing endpoints with curl
 
-	curl http://localhost:8000/api/articles/School
-	{"_id":"604bb7da7671bc7ca6e866a9","name":"School","upvotes":0,"comments":"Temp"}
+	curl http://localhost:8010/api/articles/React
+	{"_id":"6054fc5a6b7e9891e0de8d1e","name":"React","upvotes":4,"comments":[{"postedBy":"ME","text":"Nice"},{"postedBy":"test","text":"test"}]}
 
-	curl -X POST  http://localhost:8000/api/articles/School/upvote
-	{"_id":"604bb7da7671bc7ca6e866a9","name":"School","upvotes":1,"comments":"Temp"}
+&nbsp;
+
+# Connecting to Database - MongoDB
 
 
-	curl http://localhost:8000/api/articles/School
-	{"_id":"604bb7da7671bc7ca6e866a9","name":"School","upvotes":1,"comments":"Temp"}![image](https://user-images.githubusercontent.com/34193287/111024386-8d486680-8404-11eb-952f-ce83cedd7c81.png)
+**Starting the MongoDB Server**
+
+      mongod --port 27017 --dbpath C:\Users\xyz\mdb
+
+**Importing Data using json**
+
+      mongoimport --db="react-blog-db" --collection="articles" --file="articles.json" --jsonArray
+
+      mongo --port 27017 
+      use react-blog-db
+      db.articles.find()
+      db.articles.drop()
+
+
+**Sample JSON File : articles.json**
+
+    [{
+      "name": "React",
+      "upvotes" : 1,
+      "comments": [{
+        "postedBy" : "ME",
+      "text" : "Nice"
+      }]
+      
+          
+    }]
+
+
+&nbsp;
+
 
 # Creating App with React
 
 	npx create-react-app my-app
-	
+
+**Sample Project Structure**
+
+    public/
+    src/
+      setupTests.js
+      reportWebVitals.js
+      logo.svg
+      index.js
+      index.css
+      App.test.js
+      App.js
+      App.css
+
+    README.md
+    package.json
+    node_modules/
+    yarn.lock
+
+&nbsp;
+
+# Configuring Proxy for Backend Server 
+
+
+&nbsp;
+### Add below entry to package.json of the react project
+
+    "proxy": "http://localhost:8010/",
+
