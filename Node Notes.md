@@ -1,3 +1,27 @@
+# Creating App with React
+
+	npx create-react-app my-app
+
+**Sample Project Structure**
+
+    public/
+    src/
+      setupTests.js
+      reportWebVitals.js
+      logo.svg
+      index.js
+      index.css
+      App.test.js
+      App.js
+      App.css
+
+    README.md
+    package.json
+    node_modules/
+    yarn.lock
+
+&nbsp;
+
 # How to Install Node.js
 &nbsp;
 
@@ -202,29 +226,7 @@ Instead of running npx command everytime, we tell the nodemon to watch our files
 &nbsp;
 
 
-# Creating App with React
 
-	npx create-react-app my-app
-
-**Sample Project Structure**
-
-    public/
-    src/
-      setupTests.js
-      reportWebVitals.js
-      logo.svg
-      index.js
-      index.css
-      App.test.js
-      App.js
-      App.css
-
-    README.md
-    package.json
-    node_modules/
-    yarn.lock
-
-&nbsp;
 
 # Configuring Proxy for Backend Server 
 
