@@ -64,16 +64,16 @@ Example : react
 
 ### Creating a startup script in package.json
    
-This creates a script with the command provided and saves effort to type the entire command everytime.
+This creates a command for the script provided and saves effort to type the entire command everytime. To add your own command for npm start, you add it to the scripts property of your project’s package.json file.
     
-+ Add the **script name** : *hello* and the **command** to execute in **package.json** : *node ./my-script.js*
++ Add the **script name** : *my-script.js* and the **command** : "hello" to execute in **package.json** : *node ./my-script.js*
        
        "scripts": {
           "hello": "node ./my-script.js"
 
         },
 
-+ You can now run the script using npm using npm run <script_name>
++ You can now run the script using npm using npm run <Command>
         
         npm run hello
 
