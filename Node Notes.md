@@ -66,14 +66,14 @@ Example : react
    
 This creates a command for the script provided and saves effort to type the entire command everytime. To add your own command for npm start, you add it to the scripts property of your project’s package.json file.
     
-+ Add the **script name** : *my-script.js* and the **command** : "hello" to execute in **package.json** : *node ./my-script.js*
++ Add the mapping for **script execution command** : *node ./my-script.js* and the **command name** : "hello" in **package.json** 
        
        "scripts": {
           "hello": "node ./my-script.js"
 
         },
 
-+ You can now run the script using npm using npm run <Command>
++ You can now run the script using npm using npm run <Command name>
         
         npm run hello
 
