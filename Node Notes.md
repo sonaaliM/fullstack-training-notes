@@ -64,7 +64,7 @@ Example : react
 
 ### Creating a startup script in package.json
    
-This creates a command for the script provided and saves effort to type the entire command everytime. To add your own command for npm start, you add it to the scripts property of your project’s package.json file.
+This creates a command for the script provided and saves effort to type the entire command everytime. To add your own command for npm , you add it to the scripts property of your project’s package.json file.
     
 + Add the mapping for **script execution command** : *node ./my-script.js* and the **command name** : "hello" in **package.json** 
        
