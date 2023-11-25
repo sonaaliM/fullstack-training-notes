@@ -33,6 +33,7 @@
 
 ### Create a simple project 
       mkdir react-backend
+      cd react-backend
       npm init -y
 #### This will create the package.json file for you. Next we will install the required packages with npm install command.
 
